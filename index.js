@@ -33,8 +33,8 @@ function generateSchemaCollection(collectionData, collectionName) {
   for (const row of collectionData) {
     const keys = Object.keys(row);
 
+    console.log(`[x] ${collectionName} - Verifying value`);
     for (const key of keys) {
-      console.log(`[x] ${collectionName} - Verifying value`);
       if (
         !momyfile.collections[collectionName][key] &&
         !['__v', '__EMPTY', 'errors'].includes(key)
